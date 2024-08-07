@@ -62,9 +62,8 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           push: true
-          platforms: ${{  matrix.platform }}
+          platforms: ${{ matrix.platform }}
           provenance: false
-          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
